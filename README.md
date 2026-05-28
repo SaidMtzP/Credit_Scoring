@@ -112,7 +112,7 @@ Para replicar el entrenamiento y generar las gráficas de validación, clona est
 
 git clone https://github.com
 
-cd Credit\_Scoring
+cd Credit_Scoring
 
 pip install -r requirements.txt
 
