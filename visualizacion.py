@@ -74,15 +74,6 @@ mask = df1['days_employed'] > 0
 df1.loc[mask,'occupation_type'] = df1.loc[mask,'occupation_type'].fillna('unployed')
 df1.fillna('unknown',inplace=True)
 
-#print(f'first Dataset:\nNan count:\n{df1.isnull().sum()}, Duplicates count:{df1.duplicated().sum()}\nSecond Dataset\nNan count:\n{df2.isnull().sum()}, Duplicates count:{df2.duplicated().sum()}')
-
-# i.	Lowest Risk: C (Paid off that month) and X (No loan for the month)
-# ii.	Status 0: 1-29 days past due
-# iii.	Status 1: 30-59 days past due
-# iv.	Status 2: 60-89 days past due
-# v.	Status 3: 90-119 days past due
-# vi.	Status 4: 120-149 days past due
-# vii.	Highest Risk: Status 5 (Overdue or bad debts, write-offs for more than 150 days)
 status_map = {
     "X": 0,
     "C": 0,
